@@ -10,7 +10,7 @@ type ConnConfig struct {
 	Pass string
 }
 
-func NewConnConfig(host,user,pass string) *ConnConfig{
+func NewConnConfig(host, user, pass string) *ConnConfig {
 	connCfg := &ConnConfig{
 		Host: host,
 		User: user,

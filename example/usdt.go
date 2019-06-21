@@ -1,9 +1,10 @@
 package main
 
 import (
+	"log"
+
 	"github.com/fanguanghui/coinrpc/rpc"
 	"github.com/fanguanghui/coinrpc/usdt"
-	"log"
 )
 
 var (
@@ -39,7 +40,6 @@ func main() {
 	b2, r2 := omni.GetBalance("mipvXNuvsoD9JvxCiG6MeKB4noyp3e88ME", 2)
 	log.Printf("查询余额：%s, %s\n", b2, r2)
 
-
 	txs := omni.ListTransactions()
 	log.Printf("交易列表：%v\n", txs)
 
@@ -52,28 +52,28 @@ func main() {
 	ptxs := omni.GetPendingTransactions("")
 	log.Printf("零确认交易列表：%v\n", ptxs)
 
-/*
-	// fromaddress需有Bitcion做手续费
-	h ,err:= omni.Send("mfysfuTB8QcnCnbR65Y91ycZS4RLbg1TGF", "mipvXNuvsoD9JvxCiG6MeKB4noyp3e88ME", 2, "0.001")
-	if err !=nil{
-		fmt.Println(err)
-	}
-	log.Printf("固定数量交易：%v\n", h)
+	/*
+		// fromaddress需有Bitcion做手续费
+		h ,err:= omni.Send("mfysfuTB8QcnCnbR65Y91ycZS4RLbg1TGF", "mipvXNuvsoD9JvxCiG6MeKB4noyp3e88ME", 2, "0.001")
+		if err !=nil{
+			fmt.Println(err)
+		}
+		log.Printf("固定数量交易：%v\n", h)
 
 
 
-	// v0.3.1开始可以使用
-	h1 ,err1:= omni.FundedSend("mfysfuTB8QcnCnbR65Y91ycZS4RLbg1TGF", "mwuavEM8Xmu1nkCmgku4iPbrpKR4L5jM4W", 2, "0.001","mt8Lvqmik6w4ZimnqDb8pKUupYyXFpjBQJ")
-	if err1 !=nil{
-		fmt.Println(err1)
-	}
-	log.Printf("固定数量交易：%v\n", h1)
+		// v0.3.1开始可以使用
+		h1 ,err1:= omni.FundedSend("mfysfuTB8QcnCnbR65Y91ycZS4RLbg1TGF", "mwuavEM8Xmu1nkCmgku4iPbrpKR4L5jM4W", 2, "0.001","mt8Lvqmik6w4ZimnqDb8pKUupYyXFpjBQJ")
+		if err1 !=nil{
+			fmt.Println(err1)
+		}
+		log.Printf("固定数量交易：%v\n", h1)
 
-	h2 ,err2:= omni.FundedSendall("mfysfuTB8QcnCnbR65Y91ycZS4RLbg1TGF", "mipvXNuvsoD9JvxCiG6MeKB4noyp3e88ME", 2, "mt8Lvqmik6w4ZimnqDb8pKUupYyXFpjBQJ")
-	if err2 !=nil{
-		fmt.Println(err2)
-	}
-	log.Printf("所有数量交易：%v\n", h2)
-*/
+		h2 ,err2:= omni.FundedSendall("mfysfuTB8QcnCnbR65Y91ycZS4RLbg1TGF", "mipvXNuvsoD9JvxCiG6MeKB4noyp3e88ME", 2, "mt8Lvqmik6w4ZimnqDb8pKUupYyXFpjBQJ")
+		if err2 !=nil{
+			fmt.Println(err2)
+		}
+		log.Printf("所有数量交易：%v\n", h2)
+	*/
 
 }
