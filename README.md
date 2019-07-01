@@ -10,8 +10,8 @@ Examples:
 package main
 
 import (
-	"github.com/fanguanghui/coinrpc/usdt"
-	"github.com/fanguanghui/coinrpc/rpc"
+	"github.com/go-develop/coinrpc/usdt"
+	"github.com/go-develop/coinrpc/rpc"
 	"log"
 )
 

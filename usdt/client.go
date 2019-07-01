@@ -1,10 +1,10 @@
 package usdt
 
 import (
-	"github.com/fanguanghui/coinrpc/rpc"
 	"log"
-)
 
+	"github.com/go-develop/coinrpc/rpc"
+)
 
 // The client for rpc of omni core
 type OmniClient struct {
@@ -90,7 +90,6 @@ func (o *OmniClient) GetPendingTransactions(address string) (result []Tx) {
 	return
 }
 
-
 // Create and broadcast a simple send transaction.
 //
 // Arguments:
@@ -116,7 +115,6 @@ func (o *OmniClient) Send(fromaddress, toaddress string, propertyid uint32, amou
 	return hash, nil
 }
 
-
 func (o *OmniClient) FundedSend(fromaddress, toaddress string, propertyid uint32, amount, feeaddress string) (string, error) {
 	c := rpc.NewClient(o.ConnCfg)
 	var hash string
@@ -136,7 +134,6 @@ func (o *OmniClient) FundedSendall(fromaddress, toaddress string, ecosystem uint
 
 	return hash, nil
 }
-
 
 func (o *OmniClient) GetBlockCount() uint64 {
 	c := rpc.NewClient(o.ConnCfg)
@@ -171,7 +168,6 @@ func (o *OmniClient) GetTransaction(txid string) (result Tx) {
 
 	return
 }
-
 
 //暂不实现
 //== Omni layer (configuration) ==

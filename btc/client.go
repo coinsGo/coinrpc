@@ -1,10 +1,8 @@
 package btc
 
 import (
-	"github.com/fanguanghui/coinrpc/rpc"
+	"github.com/go-develop/coinrpc/rpc"
 )
-
-
 
 type BtcClient struct {
 	ConnCfg *rpc.ConnConfig

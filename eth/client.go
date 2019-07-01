@@ -1,10 +1,8 @@
 package eth
 
 import (
-	"github.com/fanguanghui/coinrpc/rpc"
+	"github.com/go-develop/coinrpc/rpc"
 )
-
-
 
 type EthClient struct {
 	ConnCfg *rpc.ConnConfig

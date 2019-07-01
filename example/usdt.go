@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/fanguanghui/coinrpc/rpc"
-	"github.com/fanguanghui/coinrpc/usdt"
+	"github.com/go-develop/coinrpc/rpc"
+	"github.com/go-develop/coinrpc/usdt"
 )
 
 var (
